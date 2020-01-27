@@ -1,0 +1,14 @@
+{
+    "name": "maryadi/test-autoload",
+    "description": "Learn how to use autoload in composer",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "maryadi",
+            "email": "maryadipoipo187@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
