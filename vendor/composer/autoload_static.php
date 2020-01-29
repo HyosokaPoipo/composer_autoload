@@ -10,9 +10,25 @@ class ComposerStaticInit7dd1c789ae85610c7b49fe62178dc9c1
         'ef8c5c2db0a440bb7ff9a9e30b85c84d' => __DIR__ . '/../..' . '/myLibs/LibTest.php',
     );
 
+    public static $prefixLengthsPsr4 = array (
+        'M' => 
+        array (
+            'MyLibs\\' => 7,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'MyLibs\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/myLibs2',
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7dd1c789ae85610c7b49fe62178dc9c1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7dd1c789ae85610c7b49fe62178dc9c1::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

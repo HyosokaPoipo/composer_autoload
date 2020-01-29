@@ -12,6 +12,11 @@
     "minimum-stability": "beta",
     "require": {},
     "autoload": {
-        "files": ["myLibs/LibTest.php"]
+        "files": [
+            "myLibs/LibTest.php"
+        ],
+        "psr-4": {
+            "MyLibs\\": "myLibs2/"
+        }
     }
 }
